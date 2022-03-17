@@ -1,9 +1,10 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import Header from "./Components/Header/Header";
+import { main } from "./Components/styles/styles";
 
 function App() {
   return (
-    <div className="container text-center">
+    <div className="main container" style={main}>
       <Header />
     </div>
   );

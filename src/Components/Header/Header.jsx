@@ -3,12 +3,13 @@ import AddTask from "../AddTask/AddTask";
 import Button from "../Button/Button";
 import Tasks from "../Tasks/Tasks";
 import { useState } from "react";
+import "./Header.css";
 import { headerContainer } from "../styles/styles";
 const Header = () => {
   const [show, setShow] = useState(true);
   const [todos, setTodos] = useState([]);
   return (
-    <div style={headerContainer}>
+    <div className="header" style={headerContainer}>
       <h1>Task Tracker</h1>
       <Button setShow={setShow} show={show} />
       {show && <AddTask setTodos={setTodos} todos={todos} />}

@@ -1,0 +1,14 @@
+.task {
+  display: flex;
+  background-color: rgba(108, 122, 137, 1);
+  color: black;
+  border-radius: 1rem;
+  padding: 5px;
+  cursor: pointer;
+}
+.aktiv {
+  background-color: rgba(108, 122, 137, 0.5);
+  text-decoration: line-through;
+  position: relative;
+  left: 10px;
+}

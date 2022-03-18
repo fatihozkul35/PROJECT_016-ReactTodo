@@ -10,10 +10,12 @@ const AddTask = ({ todos, setTodos }) => {
   };
   const addTodo = (e) => {
     e.preventDefault();
-    setTodos([...todos, form]);
+    if (form.task && form.date) {
+      setTodos([...todos, form]);
+    }
     setForm({ task: "", date: "" });
   };
-  useEffect(() => {}, [todos]); //todo eklendigi zaman render edilsin bi defa componentDidmount
+  // useEffect(() => {}, [todos]); //todo eklendigi zaman render edilsin bi defa componentDidmount
   return (
     <div>
       <h1>Add Task</h1>
@@ -32,14 +34,14 @@ const AddTask = ({ todos, setTodos }) => {
         <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Label>Date & Time</Form.Label>
           <Form.Control
-            type="text"
+            type="date"
             placeholder="ADD DAY & TIME"
             name="date"
             onChange={handleForm}
             value={form.date}
           />
         </Form.Group>
-        <Button variant="primary" type="submit" onClick={addTodo}>
+        <Button className="glow-on-hover" type="submit" onClick={addTodo}>
           Submit
         </Button>
       </Form>

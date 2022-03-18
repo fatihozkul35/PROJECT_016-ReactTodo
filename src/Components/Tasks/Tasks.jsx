@@ -15,7 +15,7 @@ const Tasks = ({ todos, setTodos }) => {
 
   return (
     <>
-      <ul>
+      <div className="mx-4">
         {todos.map((todo, i) => {
           return (
             <div
@@ -35,7 +35,7 @@ const Tasks = ({ todos, setTodos }) => {
             </div>
           );
         })}
-      </ul>
+      </div>
     </>
   );
 };

@@ -8,6 +8,7 @@
   );
   background-size: 200% 200%;
   animation: movingGradient 5s linear infinite alternate;
+  font-family: "Indie Flower", cursive;
 }
 @keyframes movingGradient {
   from {

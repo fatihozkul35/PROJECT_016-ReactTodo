@@ -15,7 +15,7 @@ const AddTask = ({ todos, setTodos }) => {
     }
     setForm({ task: "", date: "" });
   };
-  // useEffect(() => {}, [todos]); //todo eklendigi zaman render edilsin bi defa componentDidmount
+
   return (
     <div>
       <h1>Add Task</h1>

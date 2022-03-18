@@ -1,6 +1,6 @@
 import React from "react";
 import { Form, Button } from "react-bootstrap";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 const AddTask = ({ todos, setTodos }) => {
   const [form, setForm] = useState({ task: "", date: "" });

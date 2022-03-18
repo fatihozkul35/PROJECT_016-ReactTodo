@@ -7,7 +7,14 @@ import "./Header.css";
 import { headerContainer } from "../styles/styles";
 const Header = () => {
   const [show, setShow] = useState(true);
-  const [todos, setTodos] = useState([]);
+  const [todos, setTodos] = useState([
+    { task: "ali", date: "1203" },
+    { task: "veli", date: "2425413" },
+    { task: "mahmut", date: "685431" },
+    { task: "muzo", date: "12635131" },
+    { task: "hakabn", date: "1246846" },
+    { task: "tatar", date: "1206641" },
+  ]);
   return (
     <div className="header" style={headerContainer}>
       <h1 className="title text-center">Task Tracker</h1>

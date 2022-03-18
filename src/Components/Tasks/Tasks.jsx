@@ -4,12 +4,16 @@ import "../Button/Button";
 import { taskListLi } from "../styles/styles";
 import "../Button/Button";
 import "./Tasks.css";
+
 const Tasks = ({ todos, setTodos }) => {
-  const handleIcon = (item) => {
-    const newTodos = todos.filter((todo) => todo.task !== item.task);
-    setTodos(newTodos);
+  const handleRemove = (e, item) => {
+    // e.stopPropagation();
+    e.currentTarget.parentNode.remove();
+    todos = todos.filter((todo) => todo.task !== item.task);
   };
+
   const handleDeaktiv = (e) => {
+    console.log("aktiv calıstı");
     e.currentTarget.classList.toggle("aktiv");
   };
 
@@ -28,7 +32,7 @@ const Tasks = ({ todos, setTodos }) => {
               <button
                 className="glow-on-hover d-flex justify-content-center align-items-center"
                 style={{ width: "3rem", height: "2rem" }}
-                onClick={() => handleIcon(todo)}
+                onClick={(e) => handleRemove(e, todo)}
               >
                 <AiOutlineMinus />
               </button>
